@@ -29,7 +29,7 @@ public class Main {
 		String title = driver.getTitle();
 		String price = driver.findElement(By.xpath("//*[@id=\"mm-saleDscPrc\"]")).getText().trim();
 		
-		String regex = "^([\\$]?[1-9]{2}[\\.]?[1-9]{2})$";
+		String regex = "^([\\$]?[1-9]{1,2}[\\.]?[1-9]{2})$";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(price);
 		m.find();
