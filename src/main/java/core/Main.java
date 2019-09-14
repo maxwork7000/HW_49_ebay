@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 
 		String us_currency_symbol = "$";
-		String url = "https://www.ebay.com/itm/Silicone-Mat-Non-stick-Pad-For-Snack-Cake-Oil-Pastry-Mat-Bake-ware-Baking-Pans/113854285110?hash=item1a823e8536:m:mPkEWhtaryAUndzdp7de_zQ";
+		String url = "https://www.ebay.com/itm/Amazon-Echo-Dot-3rd-Gen-Smart-Speaker-with-Alexa-Sandstone/202737631401?epid=6029229919&hash=item2f341ac0a9:g:z90AAOSw9TFdMil4";
 
 		Logger logger = Logger.getLogger("");
 		logger.setLevel(Level.OFF);
@@ -27,7 +27,7 @@ public class Main {
 
 		Thread.sleep(5000);
 		String title = driver.getTitle();
-		String price = driver.findElement(By.xpath("//*[@id=\"mm-saleDscPrc\"]")).getText().trim();
+		String price = driver.findElement(By.xpath("//*[@id=\"prcIsum\"]")).getText().trim();
 		
 		String regex = "^([\\$]?[1-9]{1,2}[\\.]?[1-9]{2})$";
 		Pattern p = Pattern.compile(regex);
